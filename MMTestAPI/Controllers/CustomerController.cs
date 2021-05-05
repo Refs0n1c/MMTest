@@ -20,14 +20,14 @@ namespace MMTestAPI.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Customer> GetCustomers(bool isActive)
+        public IActionResult GetCustomers(bool isActive)
         {
-           return Ok();
+           return Ok(new List<Customer>());
         }
 
         
         [HttpPost]
-        public IActionResult RemoveCustomer(bool softDelete)
+        public IActionResult RemoveCustomer(bool softDelete, int customerId)
         {
            return Ok();
         }

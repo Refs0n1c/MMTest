@@ -19,7 +19,7 @@ public class Customer
         int age = DateTime.Now.Year - DOB.Year;
 
         if (DOB > DateTime.Now.AddYears(-age)) 
-        age--;
+            age--;
 
         return age;
     }
