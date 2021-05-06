@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MMTestAPI.DataLayer.Helpers;
 
 namespace MMTestAPI
 {
@@ -28,6 +29,7 @@ namespace MMTestAPI
         {
 
             services.AddControllers();
+            services.AddDbContext<MMTestContext>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MMTestAPI", Version = "v1" });
@@ -44,6 +46,11 @@ namespace MMTestAPI
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MMTestAPI v1"));
             }
 
+            var context = app.ApplicationServices.GetService<MMTestContext>();
+            Seeder.SeedData(context);
+            // the above is to ensure our data models are populated at run time. I wanted to avoid using Local SQL instances 
+            //as it could cause issues when testing this on your machines.
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();

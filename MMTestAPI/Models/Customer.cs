@@ -1,5 +1,7 @@
 using System;
 
+namespace MMTestAPI.Models
+{
 public class Customer
 {
     public string FirstName { get; set; }
@@ -25,4 +27,6 @@ public class Customer
     }
     
     
+}
+
 }
