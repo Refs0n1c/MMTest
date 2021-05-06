@@ -11,7 +11,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MMTestAPI.DataLayer;
 using MMTestAPI.DataLayer.Helpers;
+using MMTestAPI.DataLayer.Interfaces;
+using MMTestAPI.DataLayer.Repository;
 
 namespace MMTestAPI
 {
@@ -34,6 +37,8 @@ namespace MMTestAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MMTestAPI", Version = "v1" });
             });
+
+            services.AddTransient(typeof(IRepository<>),typeof(Repository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,7 @@
+C:\BoopCode\MMTest\MMTestAPI\obj\Debug\net5.0\MMTestAPI.csprojAssemblyReference.cache
+C:\BoopCode\MMTest\MMTestAPI\obj\Debug\net5.0\MMTestAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\BoopCode\MMTest\MMTestAPI\obj\Debug\net5.0\MMTestAPI.AssemblyInfoInputs.cache
+C:\BoopCode\MMTest\MMTestAPI\obj\Debug\net5.0\MMTestAPI.AssemblyInfo.cs
+C:\BoopCode\MMTest\MMTestAPI\obj\Debug\net5.0\MMTestAPI.csproj.CoreCompileInputs.cache
+C:\BoopCode\MMTest\MMTestAPI\obj\Debug\net5.0\MMTestAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\BoopCode\MMTest\MMTestAPI\obj\Debug\net5.0\MMTestAPI.MvcApplicationPartsAssemblyInfo.cache

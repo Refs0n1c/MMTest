@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MMTestAPI.DataLayer.Entities;
  
-namespace MMTestAPI
+namespace MMTestAPI.DataLayer
 {
     public class MMTestContext : DbContext
     {
